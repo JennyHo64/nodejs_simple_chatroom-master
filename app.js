@@ -9,7 +9,7 @@ app.get('/', function(req, res){
 var user_count = 0;
 
 //當新的使用者連接進來的時候
-io.on('connection', function(socket){
+io.on('connection', function(socket){   //io是連線 socket可以是不同的(一個or多個,命名不同即可)看function收到哪一個socket
 
 	//新user
 	socket.on('add user',function(msg){
